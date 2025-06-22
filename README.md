@@ -32,7 +32,7 @@ Permite que cualquier persona seleccione una ubicación en el mapa, suba una fot
 1. Clonar el repositorio:
 
    ```bash
-   [git clone https://github.com/tu-usuario/asistente-obra-publica.git](https://github.com/JeffLcTec/asistente-mantenimiento.git)
+   https://github.com/JeffLcTec/asistente-mantenimiento.git
    cd asistente-mantenimiento
    ```
 
