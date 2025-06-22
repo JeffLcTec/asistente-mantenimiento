@@ -28,11 +28,79 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app-container {
+  padding: 20px;
+  font-family: sans-serif;
+  background-color: #f3f3f3;
 }
+
+.titulo {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.menu button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.menu button:hover {
+  background-color: #0056b3;
+}
+
+.contenido {
+  margin: 0 auto;
+  max-width: 900px;
+}
+.comment-container {
+  padding: 16px; /* Similar a p-4 en Tailwind */
+  background-color: white;
+  border-radius: 12px; /* Similar a rounded-lg */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra similar a shadow-lg */
+  margin-bottom: 16px; /* Similar a mb-4 */
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-text {
+  font-size: 14px;
+  color: #555;
+}
+
+.comment-date {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.reply-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.reply-button:hover {
+  background-color: #45a049;
+}
+
