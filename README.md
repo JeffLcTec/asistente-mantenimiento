@@ -33,7 +33,7 @@ Permite que cualquier persona seleccione una ubicación en el mapa, suba una fot
 
    ```bash
    [git clone https://github.com/tu-usuario/asistente-obra-publica.git](https://github.com/JeffLcTec/asistente-mantenimiento.git)
-   cd asistente-obra-publica
+   cd asistente-mantenimiento
    ```
 
 2. Instalar dependencias:
