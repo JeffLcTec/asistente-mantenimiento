@@ -20,7 +20,7 @@ const markerIcon = new L.Icon({
 });
 
 const iconoPersona = new L.Icon({
-  iconUrl: 'https://th.bing.com/th/id/R.55cd9c14e51e1c74c5e82d084ddd390f?rik=4RJdthnypAmELw&pid=ImgRaw&r=0&sres=1&sresct=1',
+  iconUrl: '/Personita.png',
   iconSize: [60, 70],
   iconAnchor: [16, 32],
   popupAnchor: [13, -31],
