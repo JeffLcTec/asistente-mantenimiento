@@ -12,6 +12,11 @@ import './ReportForm.css';
 import { FaMicrophone, FaMicrophoneSlash, FaCamera } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 
+
+
+const esMovil = /Mobi|Android|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(navigator.userAgent);
+
+
 const markerIcon = new L.Icon({
   iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
   iconSize: [25, 41],
@@ -195,7 +200,7 @@ const ReportForm = ({ onReportSubmit, reportes, ubicacionActual, setUbicacionAct
             <motion.div
              key="mapa-con-formulario"
                 initial={{ width: '100%' }}
-                animate={{ width: '500px' }}
+                animate={{ width: esMovil ? '100%' : '500px' }}
                 transition={{ duration: 0.6 }}
                 className="mapa-transicion"
               >
