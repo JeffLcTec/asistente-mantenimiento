@@ -160,7 +160,7 @@ const ReportForm = ({ onReportSubmit, reportes, ubicacionActual, setUbicacionAct
               {!ubicacionActual ? (
             <motion.div
               key="solo-mapa"
-              initial={{ width: esMovil ? '100%' : '500px' }}
+              initial={{ width: '100%' }}
               animate={{ width: '100%' }}
               exit={{ width: '60%' }}
               transition={{ duration: 0.2 }}
@@ -170,7 +170,12 @@ const ReportForm = ({ onReportSubmit, reportes, ubicacionActual, setUbicacionAct
             <MapContainer
               center={posicionUsuario}
               zoom={18}
-              style={{ height: '600px', width: '800px',display: 'block', margin: '0 auto' }}
+              style={{
+                width: '100%',
+                height: esMovil ? '400px' : '500px',
+                maxWidth: '100%',
+                margin: '0 auto'
+              }}
             >
               <TileLayer
                 attribution='&copy; OpenStreetMap contributors'
@@ -207,7 +212,7 @@ const ReportForm = ({ onReportSubmit, reportes, ubicacionActual, setUbicacionAct
             <MapContainer
                   center={posicionUsuario}
                   zoom={18}
-                  style={{ height: '600px', width: '100%' }}
+                  style={{ height: esMovil ? '400px' : '500px', width: '100%' }}
                 >
               <TileLayer
                 attribution='&copy; OpenStreetMap contributors'
