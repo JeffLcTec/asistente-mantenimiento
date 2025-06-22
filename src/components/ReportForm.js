@@ -160,7 +160,7 @@ const ReportForm = ({ onReportSubmit, reportes, ubicacionActual, setUbicacionAct
               {!ubicacionActual ? (
             <motion.div
               key="solo-mapa"
-              initial={{ width: '100%' }}
+              initial={{ width: esMovil ? '100%' : '500px' }}
               animate={{ width: '100%' }}
               exit={{ width: '60%' }}
               transition={{ duration: 0.2 }}
