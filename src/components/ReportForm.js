@@ -212,7 +212,7 @@ const ReportForm = ({ onReportSubmit, reportes, ubicacionActual, setUbicacionAct
             <MapContainer
                   center={posicionUsuario}
                   zoom={18}
-                  style={{ height: esMovil ? '400px' : '500px', width: '100%' }}
+                  style={{ height: esMovil ? '200px' : '500px', width: '100%' }}
                 >
               <TileLayer
                 attribution='&copy; OpenStreetMap contributors'
