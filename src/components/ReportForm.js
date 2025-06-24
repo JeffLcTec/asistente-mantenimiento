@@ -173,6 +173,7 @@ const ReportForm = ({ onReportSubmit, reportes, ubicacionActual, setUbicacionAct
               style={{
                 width: '100%',
                 height: esMovil ? '400px' : '500px',
+                borderRadius: '10px',
                 maxWidth: '100%',
                 margin: '0 auto'
               }}
@@ -210,9 +211,11 @@ const ReportForm = ({ onReportSubmit, reportes, ubicacionActual, setUbicacionAct
                 className="mapa-transicion"
               >
             <MapContainer
-                  center={posicionUsuario}
+                  center={ubicacionActual ? ubicacionActual.split(',').map(Number) : posicionUsuario}
                   zoom={18}
-                  style={{ height: esMovil ? '200px' : '500px', width: '100%' }}
+                  style={{ height: esMovil ? '200px' : '500px',
+                     width: '100%',
+                    borderRadius: '10px',}}
                 >
               <TileLayer
                 attribution='&copy; OpenStreetMap contributors'

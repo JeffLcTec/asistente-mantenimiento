@@ -5,12 +5,9 @@ import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import './ReportList.css'; // Importa el archivo de estilo
 
-const markerIcon = new L.Icon({
-  iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-});
+
+const esMovil = /Mobi|Android|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(navigator.userAgent);
+
 
 // Función para crear íconos personalizados por urgencia
 const createCustomIcon = (color) => {
@@ -89,10 +86,11 @@ return (
           center={posicionUsuario}
           zoom={15}
           style={{
-            height: '600px',
-            width: '600px',
+            height: esMovil ? '400px' : '500px',
+            width: '100%',
             borderRadius: '10px',
             display: 'block',
+            maxWidth: '100%',
             margin: '0 auto'
           }}
         >

@@ -55,6 +55,15 @@ useEffect(() => {
     setReportes([...reportes, nuevoReporte]);
   };
 
+
+const handleUrgencyChange = (id, nuevaUrgencia) => {
+  // Actualiza el estado o llama a tu API para cambiar la urgencia
+  setReportes(reportes.map(reporte => 
+    reporte.id === id ? {...reporte, urgencia: nuevaUrgencia} : reporte
+  ));
+  toast.info(`La urgencia del reporte ${id} fue actualizada a "${nuevaUrgencia}"`);
+};
+
   const handleStatusChange = (id, nuevoEstado) => {
     const actualizados = reportes.map(r =>
       r.id === id ? { ...r, estado: nuevoEstado } : r
@@ -135,7 +144,9 @@ const handleAddComment = (reporteId, texto, esRespuesta = false, comentarioPadre
         {seccionActiva === 'lista' && (
           <ReportList reportes={reportes}
                       cantones={cantones}
-                      onStatusChange={handleStatusChange} />
+                      onStatusChange={handleStatusChange}
+                      onUrgencyChange={handleUrgencyChange}
+                    />
 
         )}
         {seccionActiva === 'mapa' && (
