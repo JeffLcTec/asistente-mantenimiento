@@ -148,7 +148,7 @@ const ReportForm = ({ onReportSubmit, reportes, ubicacionActual, setUbicacionAct
   };
 
     return (
-        <div className="statistics-panel">
+        <div className="report-grid-container">
           {!posicionUsuario ? (
             <>
               <div className="spinner" style={{ marginTop: '10px' }}>
@@ -214,8 +214,8 @@ const ReportForm = ({ onReportSubmit, reportes, ubicacionActual, setUbicacionAct
                   center={ubicacionActual ? ubicacionActual.split(',').map(Number) : posicionUsuario}
                   zoom={18}
                   style={{ height: esMovil ? '200px' : '500px',
-                     width: '100%',
-                    borderRadius: '10px',}}
+                    width: '100%',
+                    borderRadius: '10px'}}
                 >
               <TileLayer
                 attribution='&copy; OpenStreetMap contributors'
@@ -262,7 +262,7 @@ const ReportForm = ({ onReportSubmit, reportes, ubicacionActual, setUbicacionAct
                       className={`mic-button ${grabando ? 'grabando' : ''}`}
                       title={grabando ? "Detener grabación" : "Iniciar grabación"}
                     >
-                      {grabando ? <FaMicrophoneSlash size={24} /> : <FaMicrophone size={24} />}
+                      {grabando ? <FaMicrophoneSlash size={20} /> : <FaMicrophone size={20} />}
                     </button>
 
                     <select value={tipo} onChange={(e) => setTipo(e.target.value)} className="report-select">
@@ -288,7 +288,9 @@ const ReportForm = ({ onReportSubmit, reportes, ubicacionActual, setUbicacionAct
                       {archivo && (
                       <img src={archivo} alt="Vista previa" style={{ maxWidth: '250px', height: '200px' }} />
                     )}
-                    <label htmlFor="foto" className="boton-pichudo" title="Tomar Foto">
+
+                    <div className="fila-botones">
+                    <label htmlFor="foto" className="boton-saico" title="Tomar Foto">
                       <FaCamera size={20} />
                     </label>
                     {subiendoImagen && (
@@ -317,6 +319,7 @@ const ReportForm = ({ onReportSubmit, reportes, ubicacionActual, setUbicacionAct
 
                     
                 <button type="submit" className="boton-saico">Enviar</button>
+                </div>
               </motion.form>
             </>
       )}

@@ -198,7 +198,7 @@
   color: white;
   border: none;
   border-radius: 50%;
-  padding: 16px;
+  padding: 10px;
   font-size: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -221,9 +221,9 @@
   background: linear-gradient(135deg, #007bff, #00c6ff);
   color: white;
   border: none;
-  border-radius: 12px;
-  padding: 12px 24px;
-  font-size: 16px;
+  border-radius: 6px;
+  padding: 10px 17px;
+  font-size: 17px;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -245,6 +245,9 @@
 }
 
 .report-grid-container {
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  border: 1px solid #ccc;
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -305,4 +308,9 @@
     width: 95% !important;
     height: auto;
   }
+}
+.fila-botones {
+  display: flex;          /* Activa Flexbox */
+  align-items: center;    /* Centra verticalmente */
+  gap: 10px;             /* Espacio entre elementos */
 }

@@ -110,7 +110,8 @@ const CommentPanel = ({ reportes, comentarios, onAddComment }) => {
                   setComentarioActivo(null);
                 }
               }}
-              className="button-blue"
+              className="boton-saico"
+              style={{ fontSize: '0.9rem' }}
             >
               Enviar Respuesta
             </button>
@@ -180,13 +181,16 @@ const CommentPanel = ({ reportes, comentarios, onAddComment }) => {
             <div key={r.id} className="comment-container">
               <div className="comment-header">
                 <span className="font-bold text-lg">{r.tipo} en {r.ciudad}</span>
-                <div className="flex gap-2">
-                  <button onClick={() => abrirMapa(r.ubicacion)} className="button-blue">
+                <div className="fila-botones">
+                  <button onClick={() => abrirMapa(r.ubicacion)} className="boton-saico"
+                    style={{ fontSize: '0.9rem' }}>
+
                     Ver ubicación
                   </button>
                   <button
                     onClick={() => setReporteActivo(reporteActivo === r.id ? null : r.id)}
-                    className="button-blue"
+                    className="boton-saico"
+                    style={{ fontSize: '0.9rem' }}
                   >
                     {reporteActivo === r.id ? 'Ocultar comentarios' : 'Ver comentarios'}
                   </button>
@@ -216,7 +220,8 @@ const CommentPanel = ({ reportes, comentarios, onAddComment }) => {
                           setTexto('');
                         }
                       }}
-                      className="button-blue"
+                      className="boton-saico"
+                      style={{ fontSize: '0.8rem' }}
                     >
                       Añadir Comentario
                     </button>

@@ -125,6 +125,7 @@ const handleAddComment = (reporteId, texto, esRespuesta = false, comentarioPadre
       <h1 className="titulo">Asistente de Mantenimiento de Obra Pública</h1>
 
       <div className="menu">
+        
         <button onClick={() => setSeccionActiva('formulario')}>Formulario</button>
         <button onClick={() => setSeccionActiva('lista')}>Lista</button>
         <button onClick={() => setSeccionActiva('mapa')}>Mapa</button>
