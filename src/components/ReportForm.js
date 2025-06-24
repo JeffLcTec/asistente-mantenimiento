@@ -148,7 +148,7 @@ const ReportForm = ({ onReportSubmit, reportes, ubicacionActual, setUbicacionAct
   };
 
     return (
-        <div className="report-grid-container">
+        <div className="statistics-panel">
           {!posicionUsuario ? (
             <>
               <div className="spinner" style={{ marginTop: '10px' }}>
