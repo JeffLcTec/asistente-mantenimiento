@@ -126,7 +126,7 @@ const handleAddComment = (reporteId, texto, esRespuesta = false, comentarioPadre
 
       <div className="menu">
         
-        <button onClick={() => setSeccionActiva('formulario')}>Formulario</button>
+        <button onClick={() => setSeccionActiva('formulario')}>Nuevo Reporte</button>
         <button onClick={() => setSeccionActiva('lista')}>Lista</button>
         <button onClick={() => setSeccionActiva('mapa')}>Mapa</button>
         <button onClick={() => setSeccionActiva('estadisticas')}>Estadísticas</button>
